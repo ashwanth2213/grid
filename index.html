@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAS Infotech Academy</title>
+    <style>
+        /* Theme Variables */
+        :root {
+            --bg-color: #3dfee1;
+            --card-bg: #fff;
+            --text-color: #333;
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            --border-radius: 10px;
+            --gap: 20px;
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--bg-color);
+        }
+
+        .grid {
+            width: 90%;
+            max-width: 1200px;
+            display: grid;
+            gap: var(--gap);
+            grid-template-areas:
+                "header header header"
+                "left main right"
+                "lefts mains rights"
+                "lefts1 mains1 rights1"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 5fr auto;
+        }
+
+        .grid>div {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            text-align: start;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .header img {
+            width: 100%;
+            height: auto;
+        }
+
+        .main,
+        .footer {
+            text-align: start;
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        .main {
+            grid-area: main;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer {
+            grid-area: footer
+        }
+
+        .footer p {
+            grid-area: footer;
+            text-align: center;
+        }
+
+        .footer span {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "left"
+                    "right"
+                    "lefts"
+                    "mains"
+                    "rights"
+                    "lefts1"
+                    "mains1"
+                    "rights1"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+
+            .main {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .main {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="header">
+            <img src="aa.png" alt="MAS Infotech Academy">
+        </div>
+        <div class="left">
+            <img src="g7.jpg" alt="Left Image">
+        </div>
+        <div class="right">
+            <img src="g2.jpg" alt="Right Image">
+        </div>
+        <div class="main">
+            <p>At MAS Infotech Academy, we believe in empowering future innovators by providing high-quality, accessible
+                IT education. Our platform offers free courses in popular programming languages like HTML, CSS, and
+                JavaScript, designed to help learners build strong foundations in coding. With easy-to-follow tutorials
+                and curated video lessons, we make learning simple and engaging, enabling students to confidently
+                explore the world of technology and innovation.</p>
+        </div>
+        <div class="lefts">
+            <img src="g3.jpg" alt="Left Secondary Image">
+        </div>
+        <div class="rights">
+            <img src="g4.jpg" alt="Right Secondary Image">
+        </div>
+        <div class="mains">
+            <img src="g5.jpg" alt="Main Secondary Image">
+        </div>
+        <div class="lefts1">
+            <img src="g7.jpg" alt="Left Tertiary Image">
+        </div>
+        <div class="rights1">
+            <img src="g8.jpg" alt="Right Tertiary Image">
+        </div>
+        <div class="mains1">
+            <img src="g6.jpg" alt="Main Tertiary Image">
+        </div>
+        <div class="footer">
+            <p>Designed by <span>A. Ashwanth</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
